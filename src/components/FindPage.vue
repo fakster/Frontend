@@ -1,5 +1,6 @@
 <template>
-  <section>
+<section class="first">
+  <div class="find-big">
     <div class="find">
       <div class="find-container">
         <div class="find-text_place">
@@ -28,10 +29,44 @@
       </div>
     </div>
     <div class="results"></div>
-  </section>
+    <section>
+      <history/>
+    </section>
+    </div>
+</section>
 </template>
+<<<<<<< HEAD
 <style scoped>
 
+=======
+
+
+
+<script>
+
+import history from './history.vue'
+export default {
+  components: { history },
+  data:() =>({
+    loading=true,
+    records = [],
+    
+    
+  }),
+}
+</script>
+
+
+
+<style scoped>
+
+.first{
+  width: 1920px;
+  height: 1000px;
+  background: #fff;
+}
+
+>>>>>>> d875a41c79fde882c05abaf8637ebe440284710c
 select {
   outline:none;
   border: 0px solid #168d73;

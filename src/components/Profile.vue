@@ -45,6 +45,14 @@
   </section>
 </template>
 
+<script>
+export default {
+  setup() {
+    
+  },
+}
+</script>
+
 <style scoped>
 #createVAc{
     position: absolute;

@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 
     <section>
         <div class="container">
@@ -36,11 +37,78 @@
                 <button class="btn_enter_background" type="submit">
                     <h3 class="btn_enter_text"> Войти   </h3>
                 </button>
+=======
+  <section>
+    <div class="container">
+      <div class="container-login100">
+        <div class="wrap-login100">
+          <form v-on:submit.prevent="login" class="login100-form validate-form">
+            <span class="login100-form-title"> Member Login </span>
+            <!--<h1 class="h3 mb-3 font-weight-normal"><img class ="image" src="static/logo.png"></h1>-->
+            <div class="wrap-input100">
+              <input
+                type="email"
+                class="input100"
+                name="email"
+                v-model="login"
+                placeholder="Введите Email"
+                required
+              />
+              <span class="focus-input100"></span>
+            </div>
+            <div class="wrap-input100">
+              <input
+                type="password"
+                class="input100"
+                name="password"
+                v-login="password"
+                placeholder="Введите Пароль"
+                minlength="6"
+                required
+              />
+              <span class="focus-input100"></span>
+              <span class="symbol-input100"><key-icon /></span>
+            </div>
+            <div class="container-login100-form-btn">
+              <button @click="setLogin" class="login100-form-btn">Войти</button>
+>>>>>>> d875a41c79fde882c05abaf8637ebe440284710c
             </div>
             
         </div>   
     </section>
 </template>
+<script>
+import axios from 'axios'
+import router from '../router'
+export default {
+   name: "Login",
+   data(){
+    return {
+      login:'',
+      password:''
+    }
+  },
+  methods:{
+    setLogin(){
+      axios.post('api-auth/',{
+        login:this.login,
+        password:this.password
+      }).then((res)=>{
+        this.login ='';
+        this.password ='';
+        router.push({name:'Profile'});
+        console.log(Response)
+      })
+      .catch((err)=>{
+        console.log(err);
+      })
+        
+
+    }
+  }
+}
+</script>
+
 
 
 

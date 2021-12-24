@@ -7,22 +7,58 @@
       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
     </h2>
     <div class="duties">
+      <form  v-on:submit.prevent ="vacancy">
       <h3>Обязанности</h3>
-      <input class="form-duties" required />
+      <input class="form-duties" v-model="duties" required />
       <h3 class="key">Ключевые требования</h3>
-      <input class="form-key" required />
+      <input class="form-key" v-model ="key"  required />
       <h3 class="work">Условия работы</h3>
-      <input class="form-work" required />
-      <h3 class="tags">Теги</h3>
+      <input class="form-work" v-model="work" required />
+      <h3 class="tags">График</h3>
       <input class="form-tags" />
       <h3 class="salary">Зарплата</h3>
-      <input class="form-salary" />
+      <input class="form-salary" v-model="salary" />
       <button class="btn btn-outline-success" type="submit">
         Создать вакансию
       </button>
+      </form>
     </div>
   </section>
 </template>
+
+<script>
+import axios from 'axios'
+import router from '../router'
+export default ({
+  data() {
+    return{
+      salary:'',
+      work:'',
+      duties:'',
+      key:''
+    }
+    
+  },
+  methods:{
+    vacancy(){
+      axios.post('api/vacancy/vacancy/',{
+        salary:this.salary,
+        requirments:this.work,
+        conditions:this.duties
+      }).then((res)=>{
+        this.salary ='';
+        this.work ='';
+        this.duties = '';
+        router.push({name:'FindPage'});
+      })
+      .catch((err)=>{
+        console.log(err);
+      })
+    }
+  }
+})
+</script>
+
 <style scoped>
 .btn {
   position: absolute;
