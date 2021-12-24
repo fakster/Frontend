@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-dark bg-primary fixed-top">
         <div class="container">
-            <router-link class="nav-link" to="/"><home-icon class="icon-2x"  fillColor="#1DC7A2" :size="54"/></router-link>
+            <router-link class="nav-link" to="/auth"><home-icon class="icon-2x"  fillColor="#1DC7A2" :size="54"/></router-link>
                 <input class="form-control" type="serach" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Поиск</button>
             <router-link class="nav-link" to="/auth"><account-icon class="icon-account"  fillColor="#1DC7A2" :size="54"/></router-link>

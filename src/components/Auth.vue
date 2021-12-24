@@ -11,6 +11,7 @@
                 type="email"
                 class="input100"
                 name="email"
+                v-model="login"
                 placeholder="Введите Email"
                 required
               />
@@ -21,6 +22,7 @@
                 type="password"
                 class="input100"
                 name="password"
+                v-login="password"
                 placeholder="Введите Пароль"
                 minlength="6"
                 required
@@ -29,7 +31,7 @@
               <span class="symbol-input100"><key-icon /></span>
             </div>
             <div class="container-login100-form-btn">
-              <button type="submit" class="login100-form-btn">Войти</button>
+              <button @click="setLogin" class="login100-form-btn">Войти</button>
             </div>
             <div class="text-center p-t-12">
               <span class="txt1"> Forgot </span>
@@ -46,6 +48,38 @@
     </div>
   </section>
 </template>
+<script>
+import axios from 'axios'
+import router from '../router'
+export default {
+   name: "Login",
+   data(){
+    return {
+      login:'',
+      password:''
+    }
+  },
+  methods:{
+    setLogin(){
+      axios.post('api-auth/',{
+        login:this.login,
+        password:this.password
+      }).then((res)=>{
+        this.login ='';
+        this.password ='';
+        router.push({name:'Profile'});
+        console.log(Response)
+      })
+      .catch((err)=>{
+        console.log(err);
+      })
+        
+
+    }
+  }
+}
+</script>
+
 
 <style scoped>
 section {
