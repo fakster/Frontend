@@ -6,6 +6,7 @@ import Main from '@/components/Main'
 import Profile from '@/components/Profile'
 import Register from '@/components/Register'
 import Vacancy from '@/components/Vacancy'
+import Vacancy_view from '@/components/Vacancy_view'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/profile',
       name: 'Profile',
       component: Profile
+    },
+    {
+      path: '/vacancy_view',
+      name: 'Vacancy_view',
+      component: Vacancy_view
     },
     {
       path: '/register',

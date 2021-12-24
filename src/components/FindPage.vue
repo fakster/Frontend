@@ -8,14 +8,12 @@
             class="find-all"
             placeholder="Профессия, должность или компания"
           />
-        
+
           <div class="text_icon_place">
             <search-icon class="email_icon"  :size="40"/>
           </div>  
         </div>
       </div>
-      
-
 
       <div class="filtering">
         <select class="" name="Спеацильности" id="Specialist" >
@@ -35,38 +33,8 @@
     </div>
 </section>
 </template>
-<<<<<<< HEAD
 <style scoped>
 
-=======
-
-
-
-<script>
-
-import history from './history.vue'
-export default {
-  components: { history },
-  data:() =>({
-    loading=true,
-    records = [],
-    
-    
-  }),
-}
-</script>
-
-
-
-<style scoped>
-
-.first{
-  width: 1920px;
-  height: 1000px;
-  background: #fff;
-}
-
->>>>>>> d875a41c79fde882c05abaf8637ebe440284710c
 select {
   outline:none;
   border: 0px solid #168d73;
@@ -193,8 +161,6 @@ section {
   position: relative;
   width: 1920px;
   height: 1660px;
-
-  background: #ffffff;
 }
 
 </style>
