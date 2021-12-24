@@ -10,6 +10,9 @@ import TwitterIcon from 'vue-material-design-icons/Twitter.vue'
 import FacebookIcon from 'vue-material-design-icons/Facebook.vue'
 import InstagramIcon from 'vue-material-design-icons/Instagram.vue'
 import KeyIcon from'vue-material-design-icons/Key.vue'
+import AccountCircleIcon from 'vue-material-design-icons/AccountCircle.vue'
+import EmailIcon from 'vue-material-design-icons/Email.vue'
+import PhoneIcon from 'vue-material-design-icons/Phone.vue'
 
 Vue.config.productionTip = false
 
@@ -20,6 +23,10 @@ Vue.component('account-icon', AccountIcon)
 Vue.component('twitter-icon', TwitterIcon)
 Vue.component('facebook-icon', FacebookIcon)
 Vue.component('instagram-icon', InstagramIcon)
+Vue.component('account_circle-icon', AccountCircleIcon)
+Vue.component('email-icon', EmailIcon)
+Vue.component('phone-icon', PhoneIcon)
+
 
 /* eslint-disable no-new */
 new Vue({

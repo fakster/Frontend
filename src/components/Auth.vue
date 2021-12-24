@@ -1,122 +1,237 @@
 <template>
-  <section>
-    <div class="container">
-      <div class="container-login100">
-        <div class="wrap-login100">
-          <form v-on:submit.prevent="login" class="login100-form validate-form">
-            <span class="login100-form-title"> Member Login </span>
-            <!--<h1 class="h3 mb-3 font-weight-normal"><img class ="image" src="static/logo.png"></h1>-->
-            <div class="wrap-input100">
-              <input
-                type="email"
-                class="input100"
-                name="email"
-                placeholder="Введите Email"
-                required
-              />
-              <span class="focus-input100"></span>
+
+    <section>
+        <div class="container">
+            <div class="Account_Icon_place">
+            <account_circle-icon class="AccountCircleIcon"  :size="190"/>
             </div>
-            <div class="wrap-input100">
-              <input
-                type="password"
-                class="input100"
-                name="password"
-                placeholder="Введите Пароль"
-                minlength="6"
-                required
-              />
-              <span class="focus-input100"></span>
-              <span class="symbol-input100"><key-icon /></span>
+            <h3 class="enter">
+                Вход в личный кабинет
+            </h3>
+            <div class="text_email">
+                <div class="text"> 
+                    
+                        <input class="input_data"
+                        placeholder="Ваш email"
+                        />
+                         <div class="text_icon_place">
+                        <email-icon class="email_icon"  :size="35"/>
+                    </div> 
+                </div>
+                
+            </div>  
+            
+            <div class="text_password">
+                 <div class="text">  
+                   
+                        <input class="input_data"   
+                        placeholder="Ваш Пароль"
+                        />
+                          <div class="text_icon_place">
+                        <key-icon class="email_icon"  :size="35"/>
+                    </div>  
+                </div>
             </div>
-            <div class="container-login100-form-btn">
-              <button type="submit" class="login100-form-btn">Войти</button>
+            <div class="btn_enter">
+                <button class="btn_enter_background" type="submit">
+                    <h3 class="btn_enter_text"> Войти   </h3>
+                </button>
             </div>
-            <div class="text-center p-t-12">
-              <span class="txt1"> Forgot </span>
-            </div>
-            <div class="text-center p-t-136">
-              <a class="txt2">
-                <router-link to="/register"
-                  >Зарегистрироваться</router-link>
-              </a>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+            
+        </div>   
+    </section>
 </template>
 
+
+
+
 <style scoped>
-section {
-  position: relative;
-  width: 1920px;
-  height: 600px;
+
+.text_icon_place{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+   left: 24px;
+    top: 13px;
+}
+.email_icon{
+    position: absolute;
+    left: 8.33%;
+    right: 8.33%;
+    top: 16.67%;
+    bottom: 16.67%;
+    Background: cover;
+    color: rgba(16, 43, 62, 0.7);
 
 }
-.container{
-    position: absolute;
-width: 300px;
-height: 400px;
-top:100px;
-left:810px;
-background: #1DC7A2;
-border-radius: 25px;
-}
-.container-login{
-    position: absolute;
-    top:200px;
-    left:50px;
-}
-.wrap-login100{
-    position: relative;
-    top:200px;
-    left:50px;
-}
-.login100-form-title{
+.text{
 position: absolute;
-left: 25px;
-top: -100px;
+width: 400px;
+height: 70px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+border-radius: 35px;
+}
+.input_data:focus{
+    padding-left: 72px;
+opacity: 1;
+position: absolute;
+width: 400px;
+height: 70px;
+left: 0px;
+top: 0px;
+outline:none;
+color:#c99780;
+border-color: #168d73;
+border: 3px solid #168d73;
+box-sizing: border-box;
+border-radius: 35px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: center;
+
+color: rgba(16, 43, 62, 0.7);
+}
+.input_data{
+opacity: 1;
+position: absolute;
+width: 328px;
+height: 70px;
+left: 72px;
+top: 0px;
+border-radius: 0px 35px 35px 0px;
+border: 0px solid #000000;
+box-sizing: border-box;
+
 
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
 font-size: 24px;
 line-height: 28px;
-color:#fff
+display: flex;
+align-items: center;
+
+color: rgba(16, 43, 62, 0.7);
 
 }
 
-.login100-form-btn{
+.text_email{
     position: absolute;
-    top:100px;
-    left:50px;
-    width: 85px;
-    height: 35px;
+    width: 400px;
+    height: 70px;
+    left: 100px;
+    top: 365px;
+
+}
+
+.text_password{
+    position: absolute;
+    width: 400px;
+    height: 70px;
+    left: 100px;
+    top: 469px;
+
+}
+
+.btn_enter{
+    position: absolute;
+    width: 400px;
+    height: 70px;
+    left: 100px;
+    top: 630px;
+}
+
+.btn_enter_background:active{
+    border-color: #168d73;
+    border: 3px solid #168d73;
+    position: absolute;
+    width: 400px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+
     background: #102B3E;
-    border-radius: 30px;
-    color:#fff;font-family: Geneva, Arial, Helvetica, sans-serif;font-size: 18px;
-}
+    border-radius: 35px;
 
-input{
+    
+}
+.btn_enter_background{
+    position: absolute;
+    width: 400px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+
+    background: #102B3E;
+    border-radius: 35px;
+
+    
+}
+.btn_enter_text{
+    position: absolute;
+    width: 390px;
+    height: 69px;
+    left: 140px;
+    top:-41px;
+    
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+.enter{
+    position: absolute;
+    width: 400px;
+    height: 50px;
+    left: 125px;
+    top: 255px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #FFFFFF;
+}
+.container {
     position: relative;
-    width:200px;
-    height: 35px;
+    width: 600px;
+    height: 800px;
+
+    background: #1DC7A2;
     border-radius: 25px;
-    margin-top:10px;
 }
+.AccountCircleIcon{
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 8.33%;
+bottom: 8.33%;
+Background: cover;
+color: #102B3E;
+
+}
+.Account_Icon_place{
+    position: absolute;
+width: 200px;
+height: 200px;
+left: 200px;
+top: 20px;
+}
+
 </style>
-
-<script>
-import axios from 'axios'
-import router from '../router'
-import EventBus from './EventBus'
-
-export default {
-  data() {
-    return {
-      email: '',
-      password: ''
-    }
-  }, methods:{}
-};
